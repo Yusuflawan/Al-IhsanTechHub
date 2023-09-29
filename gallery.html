@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/fontawesome.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/solid.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/brands.css">
+</head>
+<body>
+    <div class="body">
+        <nav>
+            <div class="logo">
+                <img src="images/l.png" alt="logo">
+                <div class="logoTtext">
+                    <span class="alIhsan">AL-IHSAN</span><br>
+                    <span class="tech">Tech <span class="hub">HUB</span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i class="fa fa-bars" id="barIcon"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="blog.html">blog</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="photos">
+                <!-- <div class="image">
+                    <img src="img1" alt="img1">                  
+                </div>
+                <div class="image">
+                    <img src="img2" alt="img2">                  
+                </div> -->
+                <div class="image">
+                    <img src="images/img1.jpg" alt="img3">                  
+                </div>
+                <div class="image">
+                    <img src="images/img2.jpg" alt="img4">                  
+                </div>
+                <div class="image">
+                    <img src="images/img4.jpg" alt="img5">                  
+                </div>
+                <div class="image">
+                    <img src="images/img6.jpg" alt="img6">                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the current URL
+        var currentUrl = window.location.href;
+
+        // Get all the links in the navigation
+        var links = document.querySelectorAll("nav ul li a");
+
+        // Loop through the links
+        for (var i = 0; i < links.length; i++) {
+            // Check if the link's href matches the current URL
+            if (links[i].href === currentUrl) {
+                // Add a CSS class to the active link
+                links[i].classList.add("active");
+            }
+        }
+
+
+        const barIcon = document.querySelector("#barIcon");
+
+barIcon.addEventListener("click", function () {
+  const menu = document.querySelector(".menu");
+  menu.classList.toggle("act");
+});
+    </script>
+</body>
+</html>

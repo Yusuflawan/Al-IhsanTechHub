@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Ihsan Tech Hub</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/fontawesome.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/solid.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/brands.css">
+</head>
+<body>
+    <div class="body">
+        <nav>
+            <div class="logo">
+                <img src="images/l.png" alt="logo">
+                <div class="logoTtext">
+                    <span class="alIhsan">AL-IHSAN</span><br>
+                    <span class="tech">Tech <span class="hub">HUB</span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i class="fa fa-bars" id="barIcon"></i>
+            </div>
+            <ul class="menu">
+                <li id="home"><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="blog.html">blog</a></li>
+            </ul>
+        </nav>
+        <div class="imageContainer">
+            <div class="slider">
+                <img id="bg" src="logo.png" alt="backgroung image">
+            </div>
+            <div class="bg">
+               <div class="bgText">
+                    <div class="welcomeText">
+                        <p>welcome to</p>
+                        <h2 class="bigText">Al-Ihsan Tech Hub</h2>
+                        <p>A one stop destination for all your digital needs.</p>
+                        <!-- <button>View projects</button> -->
+                    </div>
+
+                    <div class="webDev">
+                        <p>Software Development</p>
+                        <h2 class="bigText">We are professionals in developing desktop, web and mobile application.</h2>
+                        <p>We have provided digital solutions in educational sectors, business sectors, etc...</p>
+                        <!-- <button>View projects</button> -->
+                    </div>
+
+                    <div class="automation">
+                        <p>Automation</p>
+                        <h2 class="bigText">One stop destination for all your digital needs.</h2>
+                        <p>We have provided solutions for both android and iOS</p>
+                        <!-- <button>View projects</button> -->
+                    </div>
+
+                    <div class="networking">
+                        <p>Networking</p>
+                        <h2 class="bigText">We are professionals in creating and troubleshooting computer networks.</h2>
+                        <p>We have provided networking solutions to companies and homes</p>
+                        <!-- <button>View projects</button> -->
+                    </div>
+
+                    <div class="graphics">
+                        <p>Graphics</p>
+                        <h2 class="bigText">One stop destination for all your digital needs.</h2>
+                        <p>We have provided solutions for both android and iOS</p>
+                        <!-- <button>View projects</button> -->
+                    </div>
+
+                    <div class="projectAssistance">
+                        <p>Project Assistance</p>
+                        <h2 class="bigText">Guiding students to get their academic project.</h2>
+                        <p>We have helped college and university students with their final year project in full and on time</p>
+                        <!-- <button>View projects</button> -->
+                    </div>
+
+                    <!-- <button>Register</button> -->
+                    <!-- <button>Login</button> -->
+               </div>
+                <!-- <div class="btn">
+                    <button id="prevBtn">Previous</button>
+                    <button id="nextBtn">Next</button>
+                </div> -->
+            </div>
+        </div>
+        <div class="socialMedia">
+            <div class="mediaBlock"><a href="#" class="media"><i class="fa-brands fa-facebook"></i></a></div>
+            <div class="mediaBlock"><a href="#" class="media"><i class="fa-brands fa-whatsapp"></i></a></div>
+            <div class="mediaBlock"><a href="#" class="media"><i class="fa-solid fa-phone"></i></a></div>
+            <div class="mediaBlock"><a href="#" class="media"><i class="fa-solid fa-envelope"></i></a></div>
+        </div>
+        <div class="services">
+            <ul>
+                <p>Services</p>
+                <li>Online Appllication Services</li>
+                <li>Graphics Design</li>
+                <li>School Project Work Assistance</li>
+                <li>Android Development</li>
+                <li>Software Design and Development</li>
+                <li>Automation</li>
+                <li>Networking Expertisewith CCNA certification, and much more...!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Get the current URL
+        var currentUrl = window.location.href;
+
+        // Get all the links in the navigation
+        var links = document.querySelectorAll("nav ul li a");
+
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].href === currentUrl) {
+                links[i].classList.add("active");
+            }
+        }
+
+
+        // const slider = document.querySelector('.slider');
+        // const prevBtn = document.getElementById('prevBtn');
+        // const nextBtn = document.getElementById('nextBtn');
+        // const images = document.querySelectorAll('.slider img');
+
+        // let currentIndex = 0;
+
+        // function updateSlider() {
+        // slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // }
+
+        // nextBtn.addEventListener('click', () => {
+        // currentIndex = (currentIndex + 1) % images.length;
+        // updateSlider();
+        // });
+
+        // prevBtn.addEventListener('click', () => {
+        // currentIndex = (currentIndex - 1 + images.length) % images.length;
+        // updateSlider();
+        // });
+
+        // function updateSlider() {
+        // const translateXValue = `-${currentIndex * 300}%`;
+        // slider.style.transform = `translateX(${translateXValue})`;
+        // }
+
+        // nextBtn.addEventListener('click', () => {
+        // if (currentIndex < images.length - 1) {
+        //     currentIndex++;
+        //     updateSlider();
+        // }
+        // });
+
+        // prevBtn.addEventListener('click', () => {
+        // if (currentIndex > 0) {
+        //     currentIndex--;
+        //     updateSlider();
+        // }
+        // });
+
+        // You can also add auto-sliding functionality
+        // setInterval(() => {
+        //   currentIndex = (currentIndex + 1) % images.length;
+        //   updateSlider();
+        // }, 3000); // Change the delay (in milliseconds) for auto-sliding
+
+
+        // const bgImage = document.querySelector('#bg');
+
+        // var i = 0;
+        // var images = [];
+
+        // var time = 4000;
+
+        // //image list
+        // images[0] = 'software.jpg';
+        // images[1] = 'automation.jpg';
+        // images[2] = 'networking.jpg';
+
+        // //change image
+        // function changeImage() {
+        //     // bgImage.style.opacity = 0.5;
+        //     bgImage.src = images[i];
+        //     // bgImage.style.transition = "0.5s ease-out";
+
+        //     if (i < images.length - 1) {
+        //         i++;
+        //     }
+        //     else{
+        //         i = 0;
+        //     }
+        //     setTimeout("changeImage()", time);
+        // }
+
+        // window.onload = changeImage;
+
+
+
+//         const bgImage = document.querySelector('#bg');
+// const bgText = document.querySelector('.bgText');
+
+// var i = 0;
+// var images = [];
+// var imageAppearTime = 1000; // Time for the image to appear (1 second)
+// var imageStayTime = 8000; // Time for the image to stay (8 seconds)
+// var imageDisappearTime = 1000; // Time for the image to disappear (1 second)
+// var time = imageAppearTime + imageStayTime + imageDisappearTime; // Total time for each image
+
+// //image list
+// images[0] = 'software.jpg';
+// images[1] = 'automation.jpg';
+// images[2] = 'networking.jpg';
+
+// //change image and text
+// function changeImage() {
+//     bgText.style.opacity = 0; // Initially hide the text
+//     bgText.style.transform = 'translateX(-100%)'; // Move the text off-screen
+
+//     // Initially hide the image
+//     bgImage.style.opacity = 0.7;
+//     bgImage.style.transition = 'opacity ' + imageAppearTime / 1000 + 's ease'; // Apply a smooth transition
+
+//     bgImage.src = images[i];
+    
+//     setTimeout(function () {
+//         bgText.style.opacity = 1; // Show the text with fade-in effect
+//         bgText.style.transform = 'translateX(0)'; // Slide in the text
+
+//         // Show the image with fade-in effect
+//         bgImage.style.opacity = 1;
+//     }, imageAppearTime);
+
+//     setTimeout(function () {
+//         bgText.style.opacity = 0; // Hide the text with fade-out effect
+//         bgText.style.transform = 'translateX(-100%)'; // Move the text off-screen
+
+//         // Hide the image with fade-out effect
+//         bgImage.style.opacity = 0.7;
+//     }, imageAppearTime + imageStayTime);
+
+//     if (i < images.length - 1) {
+//         i++;
+//     } else {
+//         i = 0;
+//     }
+//     setTimeout(changeImage, time);
+// }
+
+// window.onload = changeImage;
+
+
+
+
+
+
+        const bgImage = document.querySelector('#bg');
+        const bgText = document.querySelector('.bgText');
+
+        const textDivs = [
+            document.querySelector('.welcomeText'),
+            document.querySelector('.webDev'),
+            document.querySelector('.automation'),
+            document.querySelector('.networking'),
+            document.querySelector('.graphics'),
+            document.querySelector('.projectAssistance')
+        ];
+
+        var i = 0;
+        var images = [];
+        var imageAppearTime = 1000; // Time for the image to appear (1 second)
+        var imageStayTime = 8000; // Time for the image to stay (8 seconds)
+        var imageDisappearTime = 1000; // Time for the image to disappear (1 second)
+        var time = imageAppearTime + imageStayTime + imageDisappearTime; // Total time for each image
+
+        // image list
+        images[0] = 'images/alihsanbackground.png';
+        images[1] = 'images/webDev.jpg';
+        images[2] = 'images/automation.jpg';
+        images[3] = 'images/networking.jpg';
+        images[4] = 'images/graphics.jpg';
+        images[5] = 'images/projectAssistance.jpeg';
+
+        // Function to hide all text divs
+        function hideAllTextDivs() {
+            textDivs.forEach((div) => {
+                div.style.display = 'none';
+            });
+        }
+
+        // Change image and text
+        function changeImage() {
+            bgText.style.opacity = 0; // Initially hide the text
+            bgText.style.transform = 'translateX(-100%)'; // Move the text off-screen
+
+            // Initially hide the image
+            bgImage.style.opacity = 0.7;
+            bgImage.style.transition = 'opacity ' + imageAppearTime / 1000 + 's ease'; // Apply a smooth transition
+
+            bgImage.src = images[i];
+
+            // Hide all text divs
+            hideAllTextDivs();
+
+            // Show the corresponding text div
+            textDivs[i].style.display = 'block';
+
+            setTimeout(function () {
+                bgText.style.opacity = 1; // Show the text with fade-in effect
+                bgText.style.transform = 'translateX(0)'; // Slide in the text
+
+                // Show the image with fade-in effect
+                bgImage.style.opacity = 1;
+            }, imageAppearTime);
+
+            setTimeout(function () {
+                bgText.style.opacity = 0; // Hide the text with fade-out effect
+                bgText.style.transform = 'translateX(-100%)'; // Move the text off-screen
+
+                // Hide the image with fade-out effect
+                bgImage.style.opacity = 0.7;
+            }, imageAppearTime + imageStayTime);
+
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout(changeImage, time);
+        }
+
+        window.onload = changeImage;
+
+
+
+
+const barIcon = document.querySelector("#barIcon");
+
+barIcon.addEventListener("click", function () {
+  const menu = document.querySelector(".menu");
+  menu.classList.toggle("act");
+});
+
+    </script>
+</body>
+</html>

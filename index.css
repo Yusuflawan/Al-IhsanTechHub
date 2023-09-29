@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed';
+}
+body{
+    overflow-x: hidden;
+}
+.body{
+    width: 100%;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+}
+.logo{
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 120px;
+    height: 90px;
+}
+.logoTtext{
+    margin-left: -.5rem;
+}
+.alIhsan{
+    color: #284555;
+}
+.logo .tech{
+    color: red;
+}
+.logo .hub{
+    font-size: small;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 8px;
+    background-color: #284555;
+    color: #fff;
+}
+nav ul{
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    list-style: none;
+    /* background-color: blue; */
+}
+nav ul li{
+    flex: 1;
+    display: inline;
+    margin: 5px;
+}
+nav ul li a{
+    color: #284555;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    font-weight: bold;
+}
+nav .bar{
+    font-size: larger;
+    display: none;
+}
+.active {
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #284555;
+}
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    /* margin-left: -10%; */
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.imageContainer img {
+    width: 100%;
+    height: 50vh;
+    /* transition: 0.7s ease-in-out; */
+    object-fit: cover;
+    /* opacity: 1; */
+}
+
+.imageContainer .bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    height: 100%;
+    /* margin-left: 5%; */
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .7);
+}
+.imageContainer #prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* #prevBtn {
+    left: 2rem;
+}
+#nextBtn {
+    right: 2rem;
+} */
+.bgText{
+    color: #fff;
+}
+.bgText .bigText{
+    font-size: 1.8rem;
+    width: 80%;
+}
+.bgText {
+    /* text-align: center; */
+    color: white;
+    opacity: 0; /* Initially hidden */
+    width: 90%;
+    /* margin-left: 20%; */
+    transform: translateX(-100%); /* Initially positioned outside the viewport */
+    transition: opacity 3s ease, transform 3s ease; /* Smooth opacity and slide-in transition */
+}
+.socialMedia{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -2.5rem;
+    margin-bottom: 2rem;
+}
+.socialMedia .mediaBlock{
+    margin: 1.5rem;
+    padding: .5rem 1rem;
+    /* border: 1px solid silver; */
+    border-radius: 10px;
+    background-color: #fff;
+    /* box-shadow: 1px 1px #c5c4c4; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+}
+.socialMedia .mediaBlock i{
+    flex: 1;
+     font-size: 2rem;
+     color: #7C963D;
+}
+.services{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.services ul{
+    width: 70%;
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    background-color: #284555;
+    margin-bottom: 1rem;
+}
+.services ul li{
+    color: silver;
+}
+.services ul p{
+    color: silver;
+    font-size: large;
+    margin-left: -10px;
+    margin-bottom: 1rem;
+}
+
+
+
+@media (max-width: 500px){
+    nav{
+        position: relative;
+    }
+    nav .menu{
+        width: 80%;
+        margin-left: 10%;
+        height: 13rem;
+        margin-top: 17rem;
+        position: absolute;
+        flex-direction: column;
+        border-radius: 0px;
+        background-color: #284555;
+        text-align: center;
+        z-index: 2;
+        visibility: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+    }
+    nav .menu li a{
+        color: #fff;
+        font-size: small;
+    }
+    .menu.act {
+        visibility: visible;
+      }
+    nav .bar{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 2rem;
+        align-items: center;
+        flex: 1;
+    }
+    nav .bar i{
+        color: #284555;
+    }
+    nav .bar i:hover{
+        cursor: pointer;
+    }
+    .active{
+        background-color: transparent;
+        border-radius: 0px;
+    }
+
+}
